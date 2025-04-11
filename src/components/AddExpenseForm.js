@@ -8,8 +8,8 @@ const AddExpenseForm = ({ onAddExpense }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         onAddExpense({amount: Number(amount), category, date });
-        setAmount('')
+        setAmount('');
         setCategory('');
         setDate('');
-    }
+    };
 }
