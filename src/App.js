@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Expenses from './pages/Expenses';
+import Papa from 'papaparse'; 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [expenses, setExpenses] = useState([]);
+  const [totalBudget, setTotalBudget] = useState(2000);
+  const [darkMode, setDarkMode] = useState(false);
+
+  const totalExpenses = expenses.reduce((acc, expense) => acc + expense.amount, 0);
+
+  const addExpense = (expense) => {
+    setExpenses([...expenses, expense]);
+  };
+
+  const editExpense = (index, updatedExpense) => {
+    const updatedExpenses = expenses.map((expense, i) =>
+      i === index ? updatedExpense : expense
+    );
+    setExpenses(updatedExpenses);
+  };
+
+  const deleteExpense = (index) => {
+    setExpenses(expenses.filter((_, i) => i !== index));
+  };
+
+  const resetExpenses = () => {
+    setExpenses([]);
+  };
+
+  const handleBudgetUpdate = (updatedBudget) => {
+    setTotalBudget(updatedBudget);
+  };
+
+  const exportExpensesToCSV = () => {
+    const csvData = Papa.unparse(expenses);
+
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'expenses.csv';
+    link.click();
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+
+};
 
 export default App;
