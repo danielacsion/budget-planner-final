@@ -3,6 +3,7 @@ Overview
 
 The Budget Planner is a frontend application designed to help users track their income, expenses, and spending habits while effectively managing their financial budget.
 Live URL: https://danielacsion.github.io/
+
 Project Features
 Home Page (Dashboard)
 
