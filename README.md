@@ -1,72 +1,84 @@
+Budget Planner
+Overview
 
-# Getting Started with Create React App
+The Budget Planner is a frontend application designed to help users track their income, expenses, and spending habits while effectively managing their financial budget.
+Live URL: https://danielacsion.github.io/
+Project Features
+Home Page (Dashboard)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Header: A top navbar with links to Home and Expenses, designed for simple navigation.
 
-## Available Scripts
+    Budget Summary Box: Displays total budget, total expenses, and remaining budget. Uses color accents for clarity.
 
-In the project directory, you can run:
+    Quick-Add Form: Allows users to enter expense amount, category, and date, then add it to the list.
 
-### `npm start`
+    Spending Chart: A visual breakdown of expenses by category, dynamically updating as expenses change.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Expenses Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Search Bar: Lets users filter expenses dynamically based on entered text.
 
-### `npm test`
+    Expense List: Displays expenses as individual rows/cards, each with an edit and delete button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Sort Options: Users can sort expenses by amount or date, ascending or descending.
 
-### `npm run build`
+Design Considerations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Color Palette: Neutral tones with accent colors for highlights (e.g., green for remaining budget).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Typography: Uses readable fonts like Roboto or Open Sans.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Responsiveness: Works well on desktop and mobile, adjusting layout accordingly.
 
-### `npm run eject`
+Why Develop This App?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This app helps users manage personal finances easily by offering clear budgeting tools, tracking expenses, and visualizing spending patterns.
+Application Requirements (15 Features)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Add Expense
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    Delete Expense
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Edit Expense
 
-## Learn More
+    Dynamic Budget Summary
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Set Total Budget
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Dark Mode Toggle
 
-### Code Splitting
+    Sort Expenses
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Display Spending Progress
 
-### Analyzing the Bundle Size
+    Overspending Alerts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Custom Hook for Persistent Data
 
-### Making a Progressive Web App
+    Load Data via Custom Hook
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    Interactive Charts
 
-### Advanced Configuration
+    Monthly Reset Button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    Export Expenses as CSV
 
-### Deployment
+    Category Budget Limits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Framework & Tools
 
-### `npm run build` fails to minify
+    React for UI development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 54070cb (Initialize project using Create React App)
+    React Router for navigation
+
+    Recharts for interactive charts
+
+    localStorage API for saving expense data
+
+Final Notes
+
+    Regular commits have been made to the project.
+
+    The README includes the required explanation of framework choice.
+
+    The app is fully functional and hosted at a public URL.
