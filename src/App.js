@@ -50,7 +50,63 @@ const App = () => {
     setDarkMode(!darkMode);
   };
 
-
+  return (
+    <Router>
+      <div
+        style={{
+          backgroundColor: darkMode ? '#2c2c2c' : '#f9f9f9',
+          color: darkMode ? '#eaeaea' : '#000',
+          minHeight: '100vh',
+        }}
+      >
+        <Header />
+        <button
+          onClick={toggleDarkMode}
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            right: '1rem',
+            padding: '0.5rem 1rem',
+            backgroundColor: darkMode ? '#fff' : '#333',
+            color: darkMode ? '#333' : '#fff',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+          }}
+        >
+          {darkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                totalBudget={totalBudget}
+                totalExpenses={totalExpenses}
+                addExpense={addExpense}
+                handleBudgetUpdate={handleBudgetUpdate}
+                expenses={expenses}
+                resetExpenses={resetExpenses}
+                exportExpensesToCSV={exportExpensesToCSV}
+                darkMode={darkMode}
+              />
+            }
+          />
+          <Route
+            path="/expenses"
+            element={
+              <Expenses
+                expenses={expenses}
+                editExpense={editExpense}
+                deleteExpense={deleteExpense}
+                darkMode={darkMode}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
+  );
 };
 
 export default App;
